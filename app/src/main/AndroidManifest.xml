@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.trc.com.trdevapp">
+
+    <application
+        android:name=".App"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="开发&amp;测试辅助APP">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DetailActivity" />
+
+        <activity android:name=".uri.UriTestActivity" />
+        <activity
+            android:name=".uri.UriTestEntryActivity"
+            android:label="Uri测试入口" />
+        <activity
+            android:name=".uri.UriManualInputActivity"
+            android:label="Uri手动输入测试" />
+        <activity
+            android:name=".config.ConfigActivity"
+            android:label="APP配置" />
+        <activity android:name=".config.CreateOrEditConfigsActivity" />
+        <activity android:name=".config.ImportConfigsActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".config.CreateOrEditConfigsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickFormat"
+            android:text="格式化内容" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickSave"
+            android:text="保存配置" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etConfigName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="配置名称" />
+
+    <LinearLayout
+        android:id="@+id/keys1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#eee"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="http://" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="https://" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="www." />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text=".com" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text=".cn" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keys2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#eee"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnLeft"
+            style="@style/KeyStyle"
+            android:text="{" />
+
+        <TextView
+            android:id="@+id/btnRight"
+            style="@style/KeyStyle"
+            android:text="}" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="@string/quote" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text=":" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="," />
+
+        <TextView
+            android:id="@+id/btnDivide"
+            style="@style/KeyStyle"
+            android:text="\?" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="=" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="@string/and" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/etConfigContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="left|top"
+        android:hint="配置内容" />
+
+
+</LinearLayout>

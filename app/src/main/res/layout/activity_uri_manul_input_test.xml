@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".uri.UriManualInputActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClickOpen"
+            android:text="直接打开"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClickOpenLink"
+            android:text="WebView打开"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/keys1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#eee"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="http://" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="https://" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="trc://" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="trmall://" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="tlkj://" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="trtb://" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keys2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#eee"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="fyd://" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="trcrn://" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="trmallrn://" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="www." />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text=".com" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text=".cn" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/keys3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#eee"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="." />
+
+        <TextView
+            android:id="@+id/btnLeft"
+            style="@style/KeyStyle"
+            android:text="/" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="%" />
+
+        <TextView
+            android:id="@+id/btnDivide"
+            style="@style/KeyStyle"
+            android:text="\?" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="=" />
+
+        <TextView
+            style="@style/KeyStyle"
+            android:text="@string/and" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|top"
+        android:minLines="3"
+        app:layout_constraintTop_toBottomOf="@id/scrollView" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
